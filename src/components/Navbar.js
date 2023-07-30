@@ -4,7 +4,16 @@ import { AppBar, Toolbar, Typography } from "@mui/material";
 
 function Navbar() {
   return (
-    <AppBar position="static" sx={{ backgroundColor: "primary.main" }}>
+    <AppBar
+      position="static"
+      sx={{
+        backgroundColor: (theme) =>
+          theme.palette.mode === "light"
+            ? theme.palette.grey[200]
+            : theme.palette.grey[800],
+        p: 1,
+      }}
+    >
       <Toolbar>
         <Typography
           variant="h6"
@@ -17,7 +26,8 @@ function Navbar() {
             color: "common.white",
           }}
         >
-          My Website
+          <img src="./nameLogo.png" width="200" height="200" />
+          Home About Skills Projects Articles Interests Contact
         </Typography>
         <div>
           {/* <Link

@@ -1,11 +1,13 @@
 import "./App.css";
-import Navbar from "./components/Navbar"; // Note: Updated component name to use uppercase (Navbar)
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div>
       <Navbar />
       <p>home page baby</p>
+      <Footer />
     </div>
   );
 }
