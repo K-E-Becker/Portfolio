@@ -12,8 +12,8 @@ export default function Footer() {
           theme.palette.mode === "light"
             ? theme.palette.grey[200]
             : theme.palette.grey[800],
-        p: 6,
-        position: "absolute", // Set position to absolute
+        p: 1,
+        position: "fixed", // Set position to absolute
         width: "100%", // Take the full width of the viewport
         bottom: 0, // Stick to the bottom
       }}
