@@ -1,5 +1,4 @@
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import { Parallax } from "react-parallax";
 import { Element } from "react-scroll";
 
@@ -37,7 +36,14 @@ function App() {
           <div style={{ height: "500px" }}>This is for the tech stack</div>
         </Parallax>
       </Element>
-      <Footer />
+
+      <Element name="contact">
+        <Parallax bgImage="" strength={500}>
+          <div style={{ height: "500px" }}>
+            This is going to be my contact info
+          </div>
+        </Parallax>
+      </Element>
     </div>
   );
 }
