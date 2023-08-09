@@ -1,14 +1,36 @@
 import Navbar from "./components/Navbar";
 import { Parallax } from "react-parallax";
 import { Element } from "react-scroll";
+import "./App.css";
+import Lottie from "lottie-react";
+import animationData from "./scroll.json";
 
 function App() {
   return (
     <div>
       <Navbar />
-      <p>
-        <img src="./nameLogo.png" width="300" height="300" alt="Logo" />
-      </p>
+      <div className="logoContainer">
+        <img
+          src="./nameLogo.png"
+          width="300"
+          height="300"
+          alt="Logo"
+          className="logo"
+        />
+      </div>
+      <div className="secondContainer">
+        <p className="typewriter">
+          <h1>Scroll Down to Learn More</h1>
+        </p>
+        <Lottie
+          animationData={animationData}
+          loop={true}
+          autoplay={true}
+          style={{ width: 150, height: 150 }}
+          className="lottie"
+        />
+      </div>
+
       <Element name="about">
         <Parallax bgImage="" strength={500}>
           <div style={{ height: "500px" }}>

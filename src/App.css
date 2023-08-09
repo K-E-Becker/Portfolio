@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 125px;
+  animation: fadeInFromTop 4s ease forwards;
+  opacity: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes fadeInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px); /* Move up 50px */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Back to normal position */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo {
+  width: 300px;
+  height: 300px;
+}
+
+.secondContainer {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+.lottie {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  opacity: 0; /* Set initial opacity to hide the animation */
+  animation: showLottie 0s 5s forwards; /* Delay the animation by 5 seconds */
+}
+
+@keyframes showLottie {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   color: white;
+  margin-top: 20px;
+  font-family: "Courier New", monospace;
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end) 3s forwards,
+    blink-caret 0.75s step-end infinite;
+  width: 0;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+/* The typing effect */
+@keyframes typing {
   from {
-    transform: rotate(0deg);
+    width: 0;
   }
   to {
-    transform: rotate(360deg);
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
   }
 }
