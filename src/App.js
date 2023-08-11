@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
 import { Parallax } from "react-parallax";
 import { Element } from "react-scroll";
 import "./App.css";
@@ -88,8 +89,8 @@ function App() {
       <hr></hr>
       <Element name="projects">
         <Parallax bgImage="" strength={500}>
-          <div style={{ height: "500px" }}>
-            This is going to be the section about my projects
+          <div style={{ height: "1200px", overflowY: "scroll" }}>
+            <Projects />
           </div>
         </Parallax>
       </Element>
@@ -97,7 +98,7 @@ function App() {
 
       <Element name="blog">
         <Parallax bgImage="" strength={500}>
-          <div style={{ height: "500px" }}>
+          <div style={{ height: "400px" }}>
             <div
               style={{
                 display: "flex",

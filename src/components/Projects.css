@@ -1,0 +1,18 @@
+.EMOTN,
+.BRUH,
+.BAM {
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+  padding: 5px;
+  font-family: "Courier New", monospace;
+  color: #794f42;
+}
