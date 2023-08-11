@@ -45,7 +45,8 @@ function App() {
       <hr></hr>
       <Element name="about">
         <Parallax bgImage="" strength={500}>
-          <div style={{ height: "600px" }}>
+          <div style={{ height: "700px" }}>
+            <span className="title">About Me...</span>
             <About />
           </div>
         </Parallax>
@@ -53,7 +54,8 @@ function App() {
       <hr></hr>
       <Element name="projects">
         <Parallax bgImage="" strength={500}>
-          <div style={{ height: "1200px", overflowY: "scroll" }}>
+          <div style={{ height: "1850px" }}>
+            <span className="title">My Projects...</span>
             <Projects />
           </div>
         </Parallax>
@@ -62,7 +64,8 @@ function App() {
 
       <Element name="blog">
         <Parallax bgImage="" strength={500}>
-          <div style={{ height: "400px" }}>
+          <div style={{ height: "500px" }}>
+            <span className="title">My Articles...</span>
             <div
               style={{
                 display: "flex",
@@ -81,7 +84,7 @@ function App() {
       <Element name="tech">
         <Parallax bgImage="" strength={500}>
           <div style={{ height: "200px" }}>
-            Tech stack
+            <span className="title">Tech Stack...</span>
             <Tech />
           </div>
         </Parallax>
@@ -90,6 +93,7 @@ function App() {
 
       <Element name="contact">
         <Parallax bgImage="" strength={500}>
+          <span className="title">Contact Me...</span>
           <div
             style={{
               display: "flex",

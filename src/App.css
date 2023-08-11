@@ -55,13 +55,13 @@
   margin-top: 20px;
   font-family: "Courier New", monospace;
   letter-spacing: 0.15em; /* Adjust as needed */
-  animation: typing 3.5s steps(40, end) 3s forwards,
+  animation: typingEffect 3.5s steps(40, end) 3s forwards,
     blink-caret 0.75s step-end infinite;
   width: 0;
 }
 
 /* The typing effect */
-@keyframes typing {
+@keyframes typingEffect {
   from {
     width: 0;
   }
@@ -93,4 +93,16 @@ hr {
   position: fixed;
   bottom: 10px;
   right: 10px;
+}
+
+.title {
+  margin-left: 150px;
+
+  font-size: 30px;
+  font-family: "Courier New", monospace;
+  color: #794f42;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  letter-spacing: 0.15em;
+  animation: blink-caret 0.75s step-end infinite;
 }

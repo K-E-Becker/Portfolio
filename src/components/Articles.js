@@ -9,7 +9,7 @@ import CardMedia from "@mui/material/CardMedia";
 
 function Articles() {
   return (
-    <div>
+    <div style={{ marginTop: "20px" }}>
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia component="img" height="140" image="/glsl.png" alt="GLSL" />
         <CardContent>
