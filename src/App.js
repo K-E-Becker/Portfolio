@@ -54,7 +54,7 @@ function App() {
       <hr></hr>
       <Element name="projects">
         <Parallax bgImage="" strength={500}>
-          <div style={{ height: "1850px" }}>
+          <div style={{ height: "2600px" }}>
             <span className="title">My Projects...</span>
             <Projects />
           </div>

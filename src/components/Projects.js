@@ -1,13 +1,38 @@
 import React from "react";
 import "./Projects.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-//https://getbootstrap.com/docs/4.1/layout/grid/
+import { FaGithub } from "react-icons/fa";
+import { Button } from "@mui/material";
 
 function Projects() {
   return (
     <div>
       <div className="EMOTN">
-        <h1>EMOTN</h1>
+        <div className="row">
+          <div className="col-md-6 text-center">
+            <h1>EMOTN: A Journaling App</h1>
+            <a
+              href="https://github.com/EMOTN/emotn"
+              target="_blank"
+              title="Github"
+              style={{ marginRight: "10px" }}
+            >
+              <FaGithub size={45} style={{ color: "#1976D2" }} />
+            </a>
+            <a
+              href="https://fir-7334a.web.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outlined" style={{ marginLeft: "10px" }}>
+                Visit
+              </Button>
+            </a>
+          </div>
+          <div className="col-md-6">
+            <img src="/EMOTN.gif" alt="EMOTN" />
+          </div>
+        </div>
         <h5>Summary</h5>
         <p>
           EMOTN is the capstone project for Grace Hopper. It was a group project
@@ -72,8 +97,25 @@ function Projects() {
           Calendar and Player.
         </p>
       </div>
+
       <div className="BRUH">
-        <h1>BRUH</h1>
+        <div className="row">
+          <div className="col-md-6 text-center">
+            <h1>BRUH:</h1>
+            <h1>Health Supplment E-Commerce</h1>
+            <a
+              href="https://github.com/K-E-Becker/Bruh"
+              target="_blank"
+              title="Github"
+              style={{ marginRight: "10px" }}
+            >
+              <FaGithub size={45} style={{ color: "#1976D2" }} />
+            </a>
+          </div>
+          <div className="col-md-6">
+            <img src="/BRUH.gif" alt="EMOTN" />
+          </div>
+        </div>
         <h5>Summary</h5>
         <p>
           BRUH is an e-commerce website that sells gym supplements in a
@@ -117,7 +159,24 @@ function Projects() {
         </p>
       </div>
       <div className="BAM">
-        <h1>BAM</h1>
+        <div className="row">
+          <div className="col-md-6 text-center">
+            <h1>BAM:</h1>
+            <h1>Binary Adding Machine</h1>
+            <a
+              href="https://github.com/K-E-Becker/Binary-Adding-Machine"
+              target="_blank"
+              title="Github"
+              style={{ marginRight: "10px" }}
+            >
+              <FaGithub size={45} style={{ color: "#1976D2" }} />
+            </a>
+          </div>
+          <div className="col-md-6">
+            <img src="/BAM.gif" alt="EMOTN" />
+          </div>
+        </div>
+
         <h5>Summary</h5>
         <p>
           BAM is a binary adding machine I began as a personal project after
