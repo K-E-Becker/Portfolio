@@ -5,9 +5,13 @@ import { Element } from "react-scroll";
 import "./App.css";
 import Lottie from "lottie-react";
 import animationData from "./scroll.json";
-import { TextField, Box, Button, Fab } from "@mui/material";
+import { TextField, Typography, Box, Button, Fab } from "@mui/material";
 import { KeyboardArrowUp } from "@mui/icons-material";
 import emailjs from "@emailjs/browser";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
 
 function App() {
   const [Name, setName] = useState("");
@@ -81,7 +85,7 @@ function App() {
           </div>
         </Parallax>
       </Element>
-
+      <hr></hr>
       <Element name="projects">
         <Parallax bgImage="" strength={500}>
           <div style={{ height: "500px" }}>
@@ -89,12 +93,51 @@ function App() {
           </div>
         </Parallax>
       </Element>
-
+      <hr></hr>
       <Element name="blog">
         <Parallax bgImage="" strength={500}>
-          <div style={{ height: "500px" }}>This is about my blog</div>
+          <div style={{ height: "500px" }}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Card sx={{ maxWidth: 345 }}>
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image="/glsl.png"
+                  alt="GLSL"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    From Gaming to Google. What is WebGL?
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    This article takes a quick look into the non-gaming
+                    applications of WebGL such as how it was implemented into
+                    Google Maps, its use in various entertainment outlets, and
+                    how educational sources utilized WebGL.
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <a
+                    href="https://medium.com/@krstn.becker/from-gaming-to-google-what-is-webgl-787580db09"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button size="small">Learn More</Button>
+                  </a>
+                </CardActions>
+              </Card>
+            </div>
+          </div>
         </Parallax>
       </Element>
+      <hr></hr>
 
       <Element name="interest">
         <Parallax bgImage="" strength={500}>
