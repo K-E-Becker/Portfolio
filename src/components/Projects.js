@@ -1,5 +1,7 @@
 import React from "react";
 import "./Projects.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+//https://getbootstrap.com/docs/4.1/layout/grid/
 
 function Projects() {
   return (
@@ -67,7 +69,7 @@ function Projects() {
         <h5>Technology</h5>
         <p>
           React, HTML, CSS, Javascript, firebase, React libraries such as Quill,
-          Calendar and Music.
+          Calendar and Player.
         </p>
       </div>
       <div className="BRUH">

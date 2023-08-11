@@ -86,32 +86,7 @@ hr {
   border: none;
   height: 2px;
   background-color: black;
-}
-
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.techContainer {
-  display: flex;
-  flex-direction: row;
-
-  animation: slide 15s infinite linear;
-}
-
-.techContainer img {
-  margin: 0 20px; /* Add left and right margin around each image */
-}
-
-.techRowContainer {
-  display: flex;
-
-  margin-top: 20px;
+  margin: 0 auto;
 }
 
 .scroll-to-top-button {
