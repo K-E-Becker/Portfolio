@@ -139,6 +139,19 @@ function Navbar() {
           </MenuItem>
           <MenuItem>
             <ScrollLink
+              activeClass="interest"
+              to="blog"
+              spy={true}
+              smooth={true}
+              duration={500}
+              onClick={handleMenuClose}
+            >
+              Interests
+            </ScrollLink>
+          </MenuItem>
+
+          <MenuItem>
+            <ScrollLink
               activeClass="active"
               to="tech"
               spy={true}

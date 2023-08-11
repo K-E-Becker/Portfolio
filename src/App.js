@@ -1,11 +1,49 @@
+import React, { useState, useRef } from "react";
 import Navbar from "./components/Navbar";
 import { Parallax } from "react-parallax";
 import { Element } from "react-scroll";
 import "./App.css";
 import Lottie from "lottie-react";
 import animationData from "./scroll.json";
+import { TextField, Box, Button } from "@mui/material";
+import emailjs from "@emailjs/browser";
 
 function App() {
+  const [Name, setName] = useState("");
+  const [Email, setEmail] = useState("");
+  const [Message, setMessage] = useState("");
+  const form = useRef();
+
+  const handleReset = () => {
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_94cqixi",
+        "template_p557ddp",
+        form.current,
+        "C6M4dy_EqdKcAmUtZ"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          handleReset();
+          alert(
+            "Thank you for your interest!  I will get back to you as soon as possible!"
+          );
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div>
       <Navbar />
@@ -53,6 +91,12 @@ function App() {
         </Parallax>
       </Element>
 
+      <Element name="interest">
+        <Parallax bgImage="" strength={500}>
+          <div style={{ height: "500px" }}>Areas of Interest</div>
+        </Parallax>
+      </Element>
+
       <Element name="tech">
         <Parallax bgImage="" strength={500}>
           <div style={{ height: "200px" }}>
@@ -80,6 +124,8 @@ function App() {
                   width="100"
                   alt="firebase"
                 />
+                <img src="git.png" height="100" width="100" alt="git" />
+                <img src="express.png" height="100" width="100" alt="express" />
               </div>
               <div className="techContainer">
                 <img src="html.png" height="100" width="100" alt="html" />
@@ -103,16 +149,92 @@ function App() {
                   width="100"
                   alt="firebase"
                 />
+                <img src="git.png" height="100" width="100" alt="git" />
+                <img src="express.png" height="100" width="100" alt="express" />
               </div>
             </div>
           </div>
         </Parallax>
       </Element>
       <hr></hr>
+
       <Element name="contact">
         <Parallax bgImage="" strength={500}>
-          <div style={{ height: "500px" }}>
-            This is going to be my contact info
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "column",
+              alignItems: "center",
+              height: "500px",
+            }}
+          >
+            <form ref={form} onSubmit={handleSubmit}>
+              <Box
+                component="form1"
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  "& .MuiTextField-root": { m: 1, width: "45ch" },
+                }}
+                noValidate
+                autoComplete="off"
+              >
+                <div>
+                  <TextField
+                    label="Name"
+                    name="from_name"
+                    id="outlined-size-small"
+                    value={Name}
+                    onChange={(e) => setName(e.target.value)}
+                    size="small"
+                  />
+                </div>
+                <div>
+                  <TextField
+                    label="Email"
+                    name="user_email"
+                    id="outlined-size-small"
+                    value={Email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    size="small"
+                  />
+                </div>
+              </Box>
+              <Box
+                component="form2"
+                sx={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                  flexDirection: "column",
+                  "& .MuiTextField-root": { m: 1, width: "92ch" },
+                  "& .MuiButton-root": { mt: 2, ml: 1, mr: 5 },
+                }}
+                noValidate
+                autoComplete="off"
+              >
+                <div>
+                  <TextField
+                    id="Your Message"
+                    label="Your Message"
+                    name="message"
+                    multiline
+                    rows={10}
+                    value={Message}
+                    onChange={(e) => setMessage(e.target.value)}
+                  />
+                </div>
+                <div>
+                  <Button variant="outlined" onClick={handleSubmit}>
+                    Submit
+                  </Button>
+
+                  <Button variant="outlined" onClick={handleReset}>
+                    Reset
+                  </Button>
+                </div>
+              </Box>
+            </form>
           </div>
         </Parallax>
       </Element>
