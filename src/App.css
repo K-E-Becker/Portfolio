@@ -113,3 +113,9 @@ hr {
 
   margin-top: 20px;
 }
+
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}

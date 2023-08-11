@@ -5,7 +5,8 @@ import { Element } from "react-scroll";
 import "./App.css";
 import Lottie from "lottie-react";
 import animationData from "./scroll.json";
-import { TextField, Box, Button } from "@mui/material";
+import { TextField, Box, Button, Fab } from "@mui/material";
+import { KeyboardArrowUp } from "@mui/icons-material";
 import emailjs from "@emailjs/browser";
 
 function App() {
@@ -42,6 +43,10 @@ function App() {
           console.log(error.text);
         }
       );
+  };
+
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -238,6 +243,15 @@ function App() {
           </div>
         </Parallax>
       </Element>
+      <div className="scroll-to-top-button">
+        <Fab
+          color="primary"
+          aria-label="scroll-to-top"
+          onClick={handleScrollToTop}
+        >
+          <KeyboardArrowUp />
+        </Fab>
+      </div>
     </div>
   );
 }

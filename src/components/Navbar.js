@@ -108,6 +108,7 @@ function Navbar() {
               spy={true}
               smooth={true}
               duration={500}
+              offset={-50}
               onClick={handleMenuClose}
             >
               About
@@ -120,6 +121,7 @@ function Navbar() {
               spy={true}
               smooth={true}
               duration={500}
+              offset={-50}
               onClick={handleMenuClose}
             >
               Projects
@@ -132,6 +134,7 @@ function Navbar() {
               spy={true}
               smooth={true}
               duration={500}
+              offset={-50}
               onClick={handleMenuClose}
             >
               My Blog
@@ -140,10 +143,11 @@ function Navbar() {
           <MenuItem>
             <ScrollLink
               activeClass="interest"
-              to="blog"
+              to="interest"
               spy={true}
               smooth={true}
               duration={500}
+              offset={-50}
               onClick={handleMenuClose}
             >
               Interests
@@ -157,6 +161,7 @@ function Navbar() {
               spy={true}
               smooth={true}
               duration={500}
+              offset={-100}
               onClick={handleMenuClose}
             >
               Tech Stack
@@ -169,6 +174,7 @@ function Navbar() {
               spy={true}
               smooth={true}
               duration={500}
+              offset={-100}
               onClick={handleMenuClose}
             >
               Contact Me
