@@ -11,6 +11,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Link as ScrollLink } from "react-scroll";
 import { FaGithub, FaLinkedin, FaMedium } from "react-icons/fa";
 import { MdOutlineEmail, MdFilePresent } from "react-icons/md";
+import "./Navbar.css";
 
 function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -112,47 +113,87 @@ function Navbar() {
           open={Boolean(anchorEl)}
           onClose={handleMenuClose}
         >
-          <MenuItem>
+          <MenuItem
+            sx={{
+              "& a": {
+                textDecoration: "none",
+                color: "#794F42",
+              },
+              "& a:visited": {
+                color: "#794F42",
+              },
+            }}
+          >
             <ScrollLink
               activeClass="active"
               to="about"
               spy={true}
               smooth={true}
               duration={500}
-              offset={-50}
+              offset={-90}
               onClick={handleMenuClose}
             >
               About
             </ScrollLink>
           </MenuItem>
-          <MenuItem>
+          <MenuItem
+            sx={{
+              "& a": {
+                textDecoration: "none",
+                color: "#794F42",
+              },
+              "& a:visited": {
+                color: "#794F42",
+              },
+            }}
+          >
             <ScrollLink
               activeClass="active"
               to="projects"
               spy={true}
               smooth={true}
               duration={500}
-              offset={-50}
+              offset={-90}
               onClick={handleMenuClose}
             >
               Projects
             </ScrollLink>
           </MenuItem>
-          <MenuItem>
+          <MenuItem
+            sx={{
+              "& a": {
+                textDecoration: "none",
+                color: "#794F42",
+              },
+              "& a:visited": {
+                color: "#794F42",
+              },
+            }}
+          >
             <ScrollLink
               activeClass="active"
               to="blog"
               spy={true}
               smooth={true}
               duration={500}
-              offset={-50}
+              offset={-90}
               onClick={handleMenuClose}
             >
               My Articles
             </ScrollLink>
           </MenuItem>
 
-          <MenuItem>
+          <MenuItem
+            sx={{
+              "& a": {
+                textDecoration: "none",
+                color: "#794F42",
+              },
+              "& a:visited": {
+                color: "#794F42",
+              },
+            }}
+          >
             <ScrollLink
               activeClass="active"
               to="tech"
@@ -165,7 +206,17 @@ function Navbar() {
               Tech Stack
             </ScrollLink>
           </MenuItem>
-          <MenuItem>
+          <MenuItem
+            sx={{
+              "& a": {
+                textDecoration: "none",
+                color: "#794F42",
+              },
+              "& a:visited": {
+                color: "#794F42",
+              },
+            }}
+          >
             <ScrollLink
               activeClass="active"
               to="contact"
