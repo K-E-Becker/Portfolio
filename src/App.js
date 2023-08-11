@@ -94,6 +94,7 @@ function App() {
         </Parallax>
       </Element>
       <hr></hr>
+
       <Element name="blog">
         <Parallax bgImage="" strength={500}>
           <div style={{ height: "500px" }}>
@@ -138,12 +139,6 @@ function App() {
         </Parallax>
       </Element>
       <hr></hr>
-
-      <Element name="interest">
-        <Parallax bgImage="" strength={500}>
-          <div style={{ height: "500px" }}>Areas of Interest</div>
-        </Parallax>
-      </Element>
 
       <Element name="tech">
         <Parallax bgImage="" strength={500}>

@@ -45,6 +45,17 @@ function Navbar() {
           sx={{ mr: 2 }}
         >
           <MenuIcon style={{ color: "#794F42", fontSize: "40px" }} />
+          <Typography
+            variant="body1"
+            sx={{
+              marginLeft: 1,
+              color: "#794F42",
+              fontSize: "26pt",
+              fontFamily: "Courier New, monospace",
+            }}
+          >
+            Kristin Becker
+          </Typography>
         </IconButton>
         <Typography
           sx={{ flexGrow: 1, display: "flex", justifyContent: "flex-end" }}
@@ -137,20 +148,7 @@ function Navbar() {
               offset={-50}
               onClick={handleMenuClose}
             >
-              My Blog
-            </ScrollLink>
-          </MenuItem>
-          <MenuItem>
-            <ScrollLink
-              activeClass="interest"
-              to="interest"
-              spy={true}
-              smooth={true}
-              duration={500}
-              offset={-50}
-              onClick={handleMenuClose}
-            >
-              Interests
+              My Articles
             </ScrollLink>
           </MenuItem>
 
