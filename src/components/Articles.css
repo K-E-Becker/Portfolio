@@ -1,0 +1,5 @@
+.card-row {
+  display: flex;
+  justify-content: space-between; /* Distributes cards evenly along the row */
+  gap: 20px; /* Adjust the gap as needed */
+}

@@ -72,7 +72,7 @@ function Navbar() {
             />
           </a>
           <a
-            href="www.linkedin.com/in/kristin-e-becker"
+            href="https://www.linkedin.com/in/kristin-e-becker/"
             target="_blank"
             title="LinkedIn"
           >
