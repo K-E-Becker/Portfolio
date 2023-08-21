@@ -98,7 +98,7 @@ function Navbar() {
             />
           </a>
           <a
-            href="https://drive.google.com/file/d/1_BAYD8-Hx4AdCzQeyXAIkgZ_pzIu3eRR/view?usp=sharing"
+            href="https://drive.google.com/file/d/1J0Trl1MSUBg28glqiHi9e4rZ3foIC7tP/view?usp=sharing"
             target="_blank"
             title="My Resume"
           >
